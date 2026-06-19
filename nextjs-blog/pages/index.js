@@ -60,7 +60,7 @@ export default function Home({ allPostsData }) {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontSize: 'x-large', color: '#0000ff', fontWeight: 'bold' }}
+                  style={{ fontSize: 'x-large', color: '#0070f3', fontWeight: 'bold' }}
                 >
                   {name}
                 </a>
