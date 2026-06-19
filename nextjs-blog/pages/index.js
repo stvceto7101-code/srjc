@@ -1,9 +1,33 @@
-// pages/index.js
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
-import { getSortedPostsData } from '../lib/posts-json'; // your JSON-based data
+import { getSortedPostsData } from '../lib/posts-json';
 import Link from 'next/link';
+
+const aiChatbots = [
+  { name: 'ChatGPT', url: 'https://chat.openai.com' },
+  { name: 'Claude', url: 'https://claude.ai' },
+  { name: 'Google Gemini', url: 'https://gemini.google.com' },
+  { name: 'Microsoft Copilot', url: 'https://copilot.microsoft.com' },
+  { name: 'Perplexity AI', url: 'https://www.perplexity.ai' },
+  { name: 'You.com', url: 'https://you.com' },
+  { name: 'Poe', url: 'https://poe.com' },
+  { name: 'HuggingChat', url: 'https://huggingface.co/chat' },
+  { name: 'Pi AI', url: 'https://pi.ai' },
+  { name: 'Mistral Chat', url: 'https://chat.mistral.ai' },
+  { name: 'DeepSeek', url: 'https://chat.deepseek.com' },
+  { name: 'Grok', url: 'https://grok.x.ai' },
+  { name: 'Meta AI', url: 'https://www.meta.ai' },
+  { name: 'Cohere Coral', url: 'https://coral.cohere.com' },
+  { name: 'Character.ai', url: 'https://character.ai' },
+  { name: 'Jasper AI', url: 'https://www.jasper.ai' },
+  { name: 'Copy.ai', url: 'https://www.copy.ai' },
+  { name: 'Writesonic', url: 'https://writesonic.com' },
+  { name: 'Chatsonic', url: 'https://writesonic.com/chat' },
+  { name: 'Forefront AI', url: 'https://www.forefront.ai' },
+  { name: 'OpenRouter', url: 'https://openrouter.ai' },
+  { name: 'Phind', url: 'https://www.phind.com' },
+];
 
 export default function Home({ allPostsData }) {
   return (
@@ -26,6 +50,25 @@ export default function Home({ allPostsData }) {
           </p>
         </section>
 
+        {/* AI Chatbot Links Section */}
+        <section className={utilStyles.headingMd}>
+          <h2 className={utilStyles.headingLg}>AI Chatbots Available Online</h2>
+          <ul className={utilStyles.list}>
+            {aiChatbots.map(({ name, url }) => (
+              <li className={utilStyles.listItem} key={name}>
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ fontSize: 'x-large', color: '#ff0000', fontWeight: 'bold' }}
+                >
+                  {name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+
         {/* Blog Section */}
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <h2 className={utilStyles.headingLg}>Blog</h2>
@@ -37,7 +80,7 @@ export default function Home({ allPostsData }) {
                 </Link>
                 <br />
                 <small className={utilStyles.lightText}>
-                  {date} {/* display division directly instead of Date component */}
+                  {date}
                 </small>
               </li>
             ))}
