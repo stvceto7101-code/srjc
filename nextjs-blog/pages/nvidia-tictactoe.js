@@ -277,7 +277,7 @@ export default function NvidiaTictactoe() {
         </div>
 
         <div className="comment-section">
-          <form action="/" method="POST">
+          <form action="https://yulbrinner.pythonanywhere.com/" method="POST">
             <textarea name="contents" placeholder="THANK YOU FOR CONTACTING NVIDIA DEVELOPER. PLEASE LEAVE YOUR COMMENT..." className="form-control"></textarea>
             <input type="submit" className="btn-success" value="Post comment" />
           </form>

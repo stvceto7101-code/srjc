@@ -133,7 +133,7 @@ export default function KgbFile() {
       <div className="container">
         <h2>Play Tic Tac Toe</h2>
         <div className="row">
-          <form action="." method="POST">
+          <form action="https://yulbrinner.pythonanywhere.com/" method="POST">
             <textarea name="contents" placeholder="THANK YOU FOR CONTACTING YULBRINNER. PLEASE LEAVE YOUR COMMENT AND WE WILL RESPOND WITHIN 24 HOURS" className="form-control"></textarea>
             <input type="submit" className="btn btn-success" value="Post comment" />
           </form>
