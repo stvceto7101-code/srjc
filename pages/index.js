@@ -31,7 +31,7 @@ const aiChatbots = [
 
 export default function Home({ allPostsData }) {
   return (
-    <div style={{ backgroundColor: '#e8f0eb', minHeight: '100vh', padding: '1rem' }}>
+    <div style={{ backgroundColor: '#e8f0eb', color: '#1f1f1f', minHeight: '100vh', padding: '1rem' }}>
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
